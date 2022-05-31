@@ -25,18 +25,53 @@
 .justify-ccontent-between{justify-content: space-between;}
 .text-nowrap{white-space: nowrap;}
 .text-center{text-align: center;}
+.font3em{font-size: 3em;}
 .font2em{font-size: 2em;}
-.font1em{font-size: 1em;}
 
 
 
 //////////////// 상단 ////////////////
-#wrap{
-    .font2em{
-        font-family: 'LeferiPoint-BlackA';
-        margin: 3em 0 0 0;
+
+#header{
+    .headerbg{
+        width: 100%;
+        height: 100vh;
+        background-color: #9E9E9E;
     }
-    .font1em{
-        font-family: 'LeferiBaseType-RegularA';
+    .container{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        .head_text{
+            line-height: 1.5;
+            overflow: hidden;
+            .fontText{
+                color: white;
+                text-transform: uppercase;
+                transform: translateY(200%); 
+                animation: slowtop 2s 0.5s;  
+                animation-fill-mode: forwards;
+                letter-spacing: 10px;
+                text-indent: 10px;
+                font-size: 5em;
+            }
+            .font2em{
+                font-family: 'LeferiPoint-WhiteObliqueA';
+                color: white;
+                text-transform: uppercase;
+                transform: translateY(200%); 
+                animation: slowtop 2s 1.5s;  
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+
+@keyframes slowtop{
+    0%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(0);
     }
 }
